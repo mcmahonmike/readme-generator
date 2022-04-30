@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown')
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -22,7 +22,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please provide a description of the project: (Reuired)',
+        message: 'Please provide a description of the project: (Required)',
         validate: description => {
             if (description) {
               return true;
@@ -89,7 +89,7 @@ const questions = [
         type: 'list',
         name: 'licence',
         message: 'Please choose the license/licenses you will use for your project:',
-        choices: ['Apache 2.0 License', 'BSD 3-Clause', 'BSD 2-Clause', 'GNU GPL v3']
+        choices: ['MIT', 'Apache 2.0 License', 'BSD 3-Clause', 'BSD 2-Clause', 'GNU GPL v3']
     },
     {
         type: 'input',
@@ -119,7 +119,7 @@ const questions = [
         
     }
 ];
-
+// Commented out the writetoFile function and put the logic to write the README.md file in the init function
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
 //     fs.writeFile('README.md', generateMarkdown(data), err => {
