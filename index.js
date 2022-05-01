@@ -9,6 +9,7 @@ const questions = [
         type: 'input',
         name: 'projectTitle',
         message: 'What is the title of the project?(Required)',
+        // validate used for the required input for the file
         validate: projectTitle => {
             if (projectTitle) {
               return true;
@@ -87,8 +88,9 @@ const questions = [
     },
     {
         type: 'list',
-        name: 'licence',
+        name: 'license',
         message: 'Please choose the license/licenses you will use for your project:',
+        // choices list provided for potential licenses
         choices: ['MIT', 'Apache 2.0 License', 'BSD 3-Clause', 'BSD 2-Clause', 'GNU GPL v3']
     },
     {
@@ -129,7 +131,7 @@ const questions = [
 // }
 
 
-// TODO: Create a function to initialize app
+// The main function to initialize the app and prompt questions and write the file
 function init() {
     inquirer.prompt(questions)
     .then(data => {
