@@ -120,10 +120,11 @@ function generateMarkdown(data) {
 
   ## Table Contents
 - [Description](#description)
-- [Install](#install)
+- [Installation](#installation)
 - [Usage](#usage)
+- [License](#License)
 - [Contributing](#contributing)
-- [Tests](#test)
+- [Tests](#tests)
 - [Questions](#questions)
 
   ## Description
